@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Blender modelling">
+  <!-- Blender 风格的橙色 -->
+  <path d="M8 20 L30 20 L24 30 L8 30 Z" fill="#265787"/>
+  <circle cx="34" cy="38" r="18" fill="#ea7600"/>
+  <circle cx="34" cy="38" r="9" fill="#f5a623"/>
+  <circle cx="34" cy="38" r="3.6" fill="#265787"/>
+  <path d="M34 20 a18 18 0 0 1 15.6 9" stroke="#f5a623" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+  <path d="M34 56 a18 18 0 0 0 15.6 -9" stroke="#ffffff" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.85"/>
+</svg>

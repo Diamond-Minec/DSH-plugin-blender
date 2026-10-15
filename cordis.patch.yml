@@ -1,0 +1,30 @@
+# dsh-plugin-blender 的组合包 patch：插入一行宿主插件。
+#
+# 这里只是「默认值」，日常不用改 —— 打开 DSH 设置里的「Blender 建模」一节，
+# 用大白话界面改就行（改完立即生效，不用重启）。
+- insert:
+    - id: blender
+      name: dsh-plugin-blender
+      config:
+        # Blender 主程序在哪。留空 = 自动探测（含 Steam 库）
+        blenderPath: ''
+        # 默认用哪种模式：app = 在你眼前实时建（需要 Blender 开着）
+        #                  terminal = 后台批量建（只有结果）
+        mode: app
+        # APP 模式：插件内置桥接服务监听的本地端口
+        bridgePort: 8765
+        # 连接桥接时的等待上限（毫秒）。Blender 刚启动时要给它点时间
+        bridgeTimeoutMs: 8000
+        # 成片（.blend / 预览图）存到哪个文件夹。留空 = $DSH_HOME/blender-output
+        outDir: ''
+        # 预览图尺寸
+        previewWidth: 640
+        previewHeight: 480
+        # 预览角度：0 = 正面，45 = 斜侧，135 = 另一侧，270 = 背面
+        previewAngles: [0, 45, 135]
+        # 默认要不要自动渲染预览图（agent 靠它自查）
+        autoPreview: true
+        # 终端模式的超时（毫秒），复杂模型给足时间
+        terminalTimeoutMs: 600000
+        # 打开 Blender 时自动开启桥接（要改 addon 里的偏好设置，这里只是展示当前值）
+        autostartBridge: true

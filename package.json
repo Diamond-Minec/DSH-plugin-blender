@@ -1,0 +1,75 @@
+{
+  "name": "dsh-plugin-blender",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Let DeepSeek Harness model in Blender: drive it live through a bundled addon so the user watches every step, or headless from the terminal. Includes an auto-staged preview render so the agent can look at its own work and fix it.",
+  "meta": {
+    "title": "Blender 建模",
+    "description": "让 DSH 连上 Blender 建模：可以在你眼前实时建（你能看到每一步），也可以在后台批量建。建完自动渲染预览图，agent 会看图自己改。"
+  },
+  "license": "MIT",
+  "icon": "./icon.svg",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diamond-Minec/DSH-Blender.git"
+  },
+  "homepage": "https://github.com/Diamond-Minec/DSH-Blender#readme",
+  "bugs": {
+    "url": "https://github.com/Diamond-Minec/DSH-Blender/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "blender",
+    "3d",
+    "modeling",
+    "bpy",
+    "cad",
+    "render"
+  ],
+  "scripts": {
+    "test": "node tools/verify.mjs && node tools/render.mjs && node tools/smoke.mjs && node tools/smoke-skill.mjs",
+    "verify": "node tools/verify.mjs",
+    "render": "node tools/render.mjs",
+    "smoke": "node tools/smoke.mjs",
+    "smoke:blender": "node tools/smoke.mjs --blender",
+    "smoke:app": "node tools/smoke-app.mjs",
+    "smoke:skill": "node tools/smoke-skill.mjs",
+    "prepublishOnly": "node tools/verify.mjs && node tools/render.mjs && node tools/smoke.mjs"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/en.json": "./locale/en.json",
+    "./locale/zh.json": "./locale/zh.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "blender/",
+    "skills/",
+    "tools/",
+    "locale/en.json",
+    "locale/zh.json",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  }
+}

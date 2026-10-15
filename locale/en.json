@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Blender Modelling",
+    "description": "Let DSH model in Blender: build live in front of the user so they see every step, or run headless in the background. Every pass renders a preview so the agent can look at its own work and fix it."
+  }
+}

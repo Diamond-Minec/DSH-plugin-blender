@@ -1,0 +1,32 @@
+# 依赖与构建产物（这个仓库没有任何第三方依赖，装不上也不会缺东西）
+node_modules/
+package/
+*.tgz
+
+# Blender 的运行产物：不该进版本库
+*.blend
+*.blend1
+*.blend2
+*.blend[0-9]
+# 预览图与渲染结果
+*-preview/
+render-output/
+blender-output/
+
+# Python 缓存（在 Blender 里跑过共享层就会生成）
+__pycache__/
+*.py[cod]
+*.pyo
+
+# 本机/编辑器私有文件
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# 本地配置与调试残留
+config.local.json
+*.log

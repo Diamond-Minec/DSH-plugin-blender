@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Blender 建模",
+    "description": "让 DSH 连上 Blender 建模：可以在你眼前实时建（你能看到每一步），也可以在后台批量建。建完自动渲染预览图，agent 会看图自己改。"
+  }
+}
